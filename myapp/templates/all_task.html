@@ -29,7 +29,8 @@
                             <tr class="table-dark">
                                 <th>S.No</th>
                                 <th>Task</th>
-                                <th>Action</th>
+                                <th>Status</th>
+                                <th>Remove</th>
                             </tr>
                             {% for t in task %}
                                 <tr class="table-light">
@@ -40,16 +41,19 @@
                                         <button type="button" class="btn btn-danger">
                                             <i class="fa-regular fa-circle-xmark"></i>
                                         </button>
-                                        <a href="{% url 'delete' t.id%}">delete</a>
                                     </td>
                                     {% else %}
                                     <td>
                                         <button type="button" class="btn btn-success">
                                             <i class="fa-solid fa-check"></i>
                                         </button>
-                                        <a href="{% url 'delete' t.id%}">delete</a>
                                     </td>
                                     {% endif %}
+                                    <td>
+                                        <a href="{% url 'delete' t.id %}" class="btn btn-danger">
+                                            <i class="fa-regular fa-trash-can"></i>
+                                        </a>
+                                    </td>
                                 </tr>
                             {% endfor %}
                         </table>
