@@ -27,13 +27,13 @@ A simple and practical To-Do List web application built with Django to manage da
 ---
 
 ## 📂 Project Structure
-To_Do_List/
-  │── manage.py
-  │── db.sqlite3
-  │── To_Do_List/ # Project settings
-  │── app/ # Main Django app
-  │── templates/
-  │── static/
+    To_Do_List/
+      │── manage.py
+      │── db.sqlite3
+      │── To_Do_List/ # Project settings
+      │── app/ # Main Django app
+      │── templates/
+      │── static/
 
 
 ---
