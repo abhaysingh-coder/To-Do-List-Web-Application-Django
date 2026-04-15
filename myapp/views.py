@@ -1,5 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import *
+import numpy as np
+import pandas as pd
+
 
 # Create your views here.
 def index(request):
