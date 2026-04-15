@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <!-- Favicon -->
+    {% load static %}
+    <link rel="icon" href="{% static 'Image/to-do-list.png' %}">
+    
+    <!-- Bootstrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row mx-auto my-auto">
+            <div class="col-sm-6 shadow card p-5 my-5 mx-auto">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1 class="text-center text-primary">To Do List</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class="table table-striped">
+                            <tr class="table-dark">
+                                <th>Task</th>
+                                <th>Action</th>
+                            </tr>
+                            {% for t in task %}
+                                {% if t.status == 'notdone' %}
+                                <tr class="table-light">
+                                    <td>{{t.task}}</td>
+                                    <td>
+                                        <a href="{% url 'changestatus' t.id %}" class="text-decoration-none">
+                                            <button type="button" class="btn btn-secondary">
+                                                <i class="fa-solid fa-check"></i>
+                                            </button>
+                                        </a>
+                                        <a href="{% url 'edittask' t.id %}" class="text-decoration-none">
+                                            <button type="button" class="btn btn-info">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </button>
+                                        </a>
+                                    </td>
+                                </tr>
+                                {% endif %}
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 mx-auto">
+                <a href="{% url 'addtask' %}">
+                    <button type="button" class="btn btn-primary float-start">
+                        Add New Task
+                    </button>
+                </a>
+                <a href="{% url 'alltask' %}">
+                    <button type="button" class="btn btn-primary float-end">
+                        See All Task
+                    </button>
+                </a>                
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
