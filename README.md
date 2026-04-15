@@ -57,6 +57,8 @@ python manage.py migrate
 ### 5️⃣ Run the server
 python manage.py runserver
 
+---
+
 ### 🎯 Learning Outcomes
 + Understanding Django project structure
 + Implementing CRUD operations
@@ -64,11 +66,15 @@ python manage.py runserver
 + Connecting frontend templates with backend logic
 + Using Bootstrap for responsive UI
 
+---
+
 ### 📌 Future Improvements
 + User authentication
 + Task deadlines
 + Task status (completed/pending)
 + Notifications
+
+---
 
 ### 👨‍💻 Author
 Abhay Singh
