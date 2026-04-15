@@ -59,7 +59,7 @@ python manage.py runserver
 
 ---
 
-### 🎯 Learning Outcomes
+## 🎯 Learning Outcomes
 
 + Understanding Django project structure
 + Implementing CRUD operations
@@ -69,7 +69,7 @@ python manage.py runserver
 
 ---
 
-### 📌 Future Improvements
+## 📌 Future Improvements
 
 + User authentication
 + Task deadlines
@@ -78,6 +78,6 @@ python manage.py runserver
 
 ---
 
-### 👨‍💻 Author
+## 👨‍💻 Author
 
 Abhay Singh
